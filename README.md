@@ -46,6 +46,7 @@ Limitations :
 ```
 
 * Inits in different blocks are tricky. For example, with the following example, the analyzer will consider that both columns are initialized :
+
 ```php
 $model = ORM::factory('my_model');
 if ($condition) {
