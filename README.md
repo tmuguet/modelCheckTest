@@ -54,4 +54,13 @@ if ($condition) {
 } else {
     $model->column2 = "bar";
 }
+$model->create();
+```
+
+* The analyzer will fail if using ORM::values :
+
+```php
+$user = ORM::factory('user')
+        ->values($this->request->post(), array('username','password'))
+        ->create();
 ```
